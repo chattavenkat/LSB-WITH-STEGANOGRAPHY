@@ -1,38 +1,3 @@
-/*
-Name :- Chatta Venkata Narasimha
-Batch No :- 26015B
-Date :- 07/10/2026
-PROJECT :- LSB WITH IMAGE STEGANOGRAPHY 
-
-DESCRIPTION :- 
-    The "IMAGE STEGANOGRAPHY" is a C Language based program. This is a technique
-used to hide secret information inside a BMP image without changing the visual
-quality of the image. This is done by using LSB (Least Significant Bit) encoding.
-In this project, a secret text file is hidden inside a .bmp image and a new stego
-image is created. The program provides two main operations:
-    1. Encoding (-e)
-    2. Decoding (-d)
-    By selecting -e option, the user can hide data, and by selecting -d option, the
-user can extract the hidden data from the stego image.
-
-    The Encoding procedure checks for file validation of .bmp and .txt files,
-checks the image capacity using width*height*3, copies the 54-byte BMP header,
-encodes magic string signature, secret file extension size and extension, secret
-file size and secret file data into the LSB of image bytes, and copies the remaining
-image data to create the stego image.
-
-    The Decoding procedure validates the stego image, decodes and verifies the
-magic string, decodes file extension and file size, and finally decodes the secret
-file data to recreate the original secret file.
-
-    The program uses file handling to handle binary files and uses bitwise
-operations for LSB manipulation. The secret data is hidden in such a way that the
-human eye cannot identify the difference between original and stego image.
-
-    This project demonstrates important C programming concepts such as FILE HANDLING
-in Binary Mode, BITWISE OPERATORS, STRUCTURES, POINTERS, FUNCTIONS, STRINGS,
-COMMAND LINE ARGUMENTS, and BMP FILE FORMAT.
-*/
 #include <stdio.h>
 #include <string.h>
 #include "decode.h"
